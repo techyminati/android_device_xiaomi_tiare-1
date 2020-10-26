@@ -40,7 +40,7 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 536870912
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
+TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
 
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2020-05-05
