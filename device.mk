@@ -75,18 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
-# Shims
-PRODUCT_PACKAGES += \
-    libandroid_shim \
-    libbinder_shim \
-    libshim_camera \
-    libwui
-
-# VNDK
-PRODUCT_PACKAGES += \
-    vndk_package \
-    vndk-ext
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
