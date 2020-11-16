@@ -15,6 +15,7 @@
 #
 
 $(call inherit-product, vendor/xiaomi/tiare/tiare-vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
