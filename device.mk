@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/xiaomi/ulysse/ulysse-vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, vendor/xiaomi/tiare/tiare-vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -69,13 +69,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
 
 # Properties
--include device/xiaomi/ulysse/prop.mk
+-include device/xiaomi/tiare/prop.mk
 
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.fingerprint.sh \
     init.goodix.sh \
-    init.ulysse.rc
+    init.tiare.rc
 
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh
