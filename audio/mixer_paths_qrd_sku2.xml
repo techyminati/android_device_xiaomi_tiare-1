@@ -95,6 +95,15 @@
     <ctl name="DEC4 MUX" value="ZERO" />
     <ctl name="SpkrMono VISENSE Switch" value="0" />
 
+<!-- Xiaomi changes for tiare start -->
+    <!-- bug 391554 - C3G AW87329 audio pa bring up wt tsx  begin -->
+    <ctl name="Ext_Speaker_Amp" value="Off" />
+    <!-- bug 391554 - end -->
+    <!-- Bug 394334 - add for checklist wt tsx  begin -->
+    <ctl name="EAR PA Boost" value="DISABLE" />
+    <!-- Bug 394334 - end -->
+<!-- Xiaomi changes for tiare end -->
+
     <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia3" value="0" />
@@ -1037,8 +1046,17 @@
     </path>
 
     <path name="speaker">
+<!-- Xiaomi changes for tiare start -->
+<!--
         <ctl name="RX3 MIX1 INP1" value="RX1" />
         <ctl name="SPK" value="Switch" />
+-->
+        <ctl name="MI2S_RX Channels" value="One" />
+        <ctl name="RX2 MIX1 INP1" value="RX2" />
+        <ctl name="RDAC2 MUX" value="RX2" />
+        <ctl name="HPHR" value="Switch" />
+        <ctl name="Ext_Speaker_Amp" value="On" />
+<!-- Xiaomi changes for tiare end -->
     </path>
 
     <path name="wsa-speaker">
@@ -1069,9 +1087,30 @@
    </path>
 
     <path name="speaker-mic">
+<!-- Xiaomi changes for tiare start -->
+<!--
         <path name="adc1" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
+-->
+        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="DEC2 MUX" value="ADC1" />
+        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="DEC1 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="MI2S_TX Channels" value="Two" />
+<!-- Xiaomi changes for tiare end -->
     </path>
+
+<!-- Xiaomi changes for tiare start -->
+    <path name="first-mic">
+        <ctl name="ADC1 Volume" value="2" />
+        <ctl name="DEC1 MUX" value="ADC1" />
+    </path>
+    <path name="second-mic">
+        <path name="adc3" />
+        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+    </path>
+<!-- Xiaomi changes for tiare end -->
 
     <path name="handset">
         <ctl name="RX1 MIX1 INP1" value="RX1" />
@@ -1083,7 +1122,13 @@
 
     <path name="handset-mic">
         <path name="adc1" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+<!-- Xiaomi changes for tiare start -->
+        <!-- <ctl name="IIR1 INP1 MUX" value="DEC1" /> -->
+        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="DEC2 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="MI2S_TX Channels" value="Two" />
+<!-- Xiaomi changes for tiare end -->
     </path>
 
     <path name="headphones">
@@ -1111,7 +1156,10 @@
 
     <path name="sidetone-handset">
         <path name="sidetone-iir" />
-        <ctl name="IIR1 INP1 Volume" value="53" />
+<!-- Xiaomi changes for tiare start -->
+        <!-- <ctl name="IIR1 INP1 Volume" value="53" /> -->
+        <ctl name="IIR1 INP1 Volume" value="10" />
+<!-- Xiaomi changes for tiare end -->
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
     </path>
 
@@ -1119,7 +1167,10 @@
         <path name="sidetone-iir" />
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
         <ctl name="RX2 MIX2 INP1" value="IIR1" />
-        <ctl name="IIR1 INP1 Volume" value="53" />
+<!-- Xiaomi changes for tiare start -->
+        <!-- <ctl name="IIR1 INP1 Volume" value="53" /> -->
+        <ctl name="IIR1 INP1 Volume" value="10" />
+<!-- Xiaomi changes for tiare end -->
     </path>
 
     <path name="voice-handset">
@@ -1147,7 +1198,10 @@
     </path>
 
     <path name="speaker-and-headphones">
-        <path name="speaker" />
+<!-- Xiaomi changes for tiare start -->
+        <!-- <path name="speaker" /> -->
+		<ctl name="Ext_Speaker_Amp" value="On" />
+<!-- Xiaomi changes for tiare end -->
         <path name="headphones" />
     </path>
 
@@ -1208,6 +1262,9 @@
 
     <path name="voice-dmic-ef">
         <path name="dmic-endfire" />
+<!-- Xiaomi changes for tiare start -->
+	<ctl name="IIR1 INP1 MUX" value="DEC1" />
+<!-- Xiaomi changes for tiare end -->
     </path>
 
     <path name="voice-speaker-dmic-ef">
@@ -1249,6 +1306,22 @@
     <path name="echo-reference">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="I2S_RX" />
     </path>
+
+<!-- Xiaomi changes for tiare start -->
+    <!-- bug 415509 tangshouxing add for skype echo begin -->
+    <path name="echo-reference speaker">
+	<ctl name="AUDIO_REF_EC_UL1 MUX" value="I2S_RX" />
+    </path>
+
+    <path name="echo-reference handset">
+	<ctl name="AUDIO_REF_EC_UL1 MUX" value="I2S_RX" />
+    </path>
+
+    <path name="echo-reference headphones">
+	<ctl name="AUDIO_REF_EC_UL1 MUX" value="I2S_RX" />
+    </path>
+    <!-- bug 415509 end -->
+<!-- Xiaomi changes for tiare end -->
 
     <!-- TTY devices -->
 
