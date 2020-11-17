@@ -692,3 +692,22 @@ vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib64/libts_detected_face_hal.so
 vendor/lib64/libts_face_beautify_hal.so
+
+# Camera configs - from tiare 8.1.0 OPM1.171019.026 V10.2.13.0.OCLMIXM
+vendor/etc/camera/gc8034_sunny_india_chromatix.xml
+vendor/etc/camera/hi556_sunny_chromatix.xml
+vendor/etc/camera/s5k5e8_ofilm_india_chromatix.xml
+vendor/etc/camera/msm8937_camera_india.xml
+vendor/etc/camera/hi556_sunny_india_chromatix.xml
+vendor/etc/camera/msm8937_camera_factory.xml
+vendor/etc/camera/s5k4h7_ofilm_chromatix.xml
+vendor/etc/camera/hi556_sunny_factory_chromatix.xml
+vendor/etc/camera/gc8034_sunny_chromatix.xml
+vendor/etc/camera/csidtg_camera.xml
+vendor/etc/camera/s5k4h7_ofilm_factory_chromatix.xml
+vendor/etc/camera/gc8034_sunny_factory_chromatix.xml
+vendor/etc/camera/camera_config.xml
+vendor/etc/camera/s5k5e8_ofilm_factory_chromatix.xml
+vendor/etc/camera/csidtg_chromatix.xml
+vendor/etc/camera/s5k4h7_ofilm_india_chromatix.xml
+vendor/etc/camera/s5k5e8_ofilm_riva_chromatix.xml
