@@ -1,5 +1,2 @@
-# Camera sockets
-/data/vendor/qcam(/.*)?                         u:object_r:vendor_camera_data_file:s0
-
 # Ir
 /dev/lirc0					u:object_r:lirc_device:s0
