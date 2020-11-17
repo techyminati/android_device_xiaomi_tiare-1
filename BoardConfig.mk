@@ -42,6 +42,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.recovery.qcom
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2020-05-05
 
